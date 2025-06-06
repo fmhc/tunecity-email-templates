@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>You're Invited to Tunecity - Join the Music Community</title>
+    <style>
+        /* Reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #191414;
+            background-color: #f8f9fa;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #191414;
+        }
+        
+        .music-note {
+            color: #FF6B35;
+            margin-right: 8px;
+        }
+        
+        .message {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #444444;
+        }
+        
+        .invitation-card {
+            background: linear-gradient(145deg, #fff5f3 0%, #ffe8e1 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            border-left: 4px solid #FF6B35;
+        }
+        
+        .invitation-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #191414;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            color: white !important;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .otp-section {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .otp-code {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF6B35;
+            background-color: #fff5f3;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px dashed #FF6B35;
+            display: inline-block;
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
+        
+        .community-preview {
+            margin: 40px 0;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        .community-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #191414;
+            text-align: center;
+        }
+        
+        .member-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FF6B35;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer {
+            background-color: #191414;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: #FF6B35;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        
+        .security-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        .security-icon {
+            color: #f39c12;
+            margin-right: 8px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .header, .content, .footer {
+                padding: 20px;
+            }
+            
+            .greeting {
+                font-size: 24px;
+            }
+            
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🎵 Tunecity</div>
+            <div class="tagline">Join the Music Discovery Revolution</div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <h1 class="greeting">
+                <span class="music-note">🎉</span>You're Invited!
+            </h1>
+            
+            <p class="message">
+                A fellow music lover wants you to join Tunecity, the social platform for discovering music through location and community connections.
+            </p>
+            
+            <p class="message">
+                We've created an account for you at <strong>{{ .Email }}</strong>. Accept this invitation to start exploring music like never before!
+            </p>
+            
+            <!-- Invitation Card -->
+            <div class="invitation-card">
+                <h2 class="invitation-title">🎶 Accept Your Invitation</h2>
+                
+                <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=invite&redirect_to={{ .SiteURL }}/onboarding" class="btn-primary">
+                    Join Tunecity Now
+                </a>
+                
+                <!-- Alternative OTP Section -->
+                <div class="otp-section">
+                    <p><strong>Alternative:</strong> Enter this code to join</p>
+                    <div class="otp-code">{{ .Token }}</div>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px;">
+                        This invitation expires in 7 days
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Community Preview -->
+            <div class="community-preview">
+                <h2 class="community-title">🌍 Join Our Growing Community</h2>
+                
+                <div class="member-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Music Lovers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2M+</div>
+                        <div class="stat-label">Songs Discovered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">180+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 20px; color: #666; font-size: 14px;">
+                    <strong>🎧 What you'll discover:</strong><br>
+                    Real-time music trends from your area • Connect with nearby music fans • Create location-based playlists • Unlock exclusive content and events
+                </p>
+            </div>
+            
+            <!-- Security Notice -->
+            <div class="security-notice">
+                <span class="security-icon">🛡️</span>
+                <strong>Privacy First:</strong> This invitation was sent to {{ .Email }}. Your music tastes and location data are always kept private and secure. You control what you share and with whom.
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-text">
+                Ready to discover your next favorite song?
+            </p>
+            <div class="social-links">
+                <a href="{{ .SiteURL }}">Learn More</a> |
+                <a href="{{ .SiteURL }}/about">About Us</a> |
+                <a href="{{ .SiteURL }}/privacy">Privacy Policy</a>
+            </div>
+            <p style="font-size: 12px; opacity: 0.6; margin-top: 20px;">
+                © 2024 Tunecity. All rights reserved.<br>
+                This invitation was sent to {{ .Email }}
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
